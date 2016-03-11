@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="1aq-1f-lOq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Randomize And Pair From This List-->
+        <scene sceneID="ohz-ui-c0z">
+            <objects>
+                <tableViewController id="OiS-ak-BDY" customClass="ListTableVIewController" customModule="RandomizeItems" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="INd-5h-7PL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="nameCell" textLabel="hHb-yO-bd7" style="IBUITableViewCellStyleDefault" id="I8H-Cz-Zx4">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I8H-Cz-Zx4" id="kTq-4A-qes">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hHb-yO-bd7">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="OiS-ak-BDY" id="dUd-Up-Iso"/>
+                            <outlet property="delegate" destination="OiS-ak-BDY" id="kBC-Wm-93t"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Randomize And Pair From This List" id="l8K-Fy-krd">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="add" id="7li-VW-vhp">
+                            <connections>
+                                <segue destination="X61-in-hz5" kind="show" id="DeY-Ka-rKy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h9o-Bn-fYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1037" y="328"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="0TY-Bn-il3">
+            <objects>
+                <viewController id="X61-in-hz5" customClass="DetailViewController" customModule="RandomizeItems" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VCO-jw-Mgj"/>
+                        <viewControllerLayoutGuide type="bottom" id="p1j-KP-fVa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Daz-PJ-BAL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Paired Entities Are as follows:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qpN-jB-9v4">
+                                <rect key="frame" x="20" y="338" width="560" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Pairings" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuR-9y-Zbe">
+                                <rect key="frame" x="20" y="382" width="560" height="21"/>
+                                <color key="backgroundColor" red="0.91097116470336914" green="0.90841042995452881" blue="0.30084952712059021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="vs5-WC-11V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter new name to the list" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mfn-PY-tpY">
+                                <rect key="frame" x="20" y="239" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YGG-I0-UrJ">
+                                <rect key="frame" x="20" y="177" width="560" height="44"/>
+                                <items>
+                                    <navigationItem title="Press to Play" id="e2q-KD-a9k" userLabel="Press to Play">
+                                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="play" id="KLS-nL-VCl">
+                                            <color key="tintColor" red="0.95502978563308716" green="0.32193228602409363" blue="0.080570213496685028" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="playButtonTapped:" destination="X61-in-hz5" id="mrS-4E-ebc"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="X61-in-hz5" id="GDZ-lc-HOc"/>
+                                </connections>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kK7-tx-OaX">
+                                <rect key="frame" x="236" y="285" width="72" height="30"/>
+                                <color key="backgroundColor" red="0.91097116470336914" green="0.90841042995452881" blue="0.30084952712059021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.96661502122879028" green="0.052949465811252594" blue="0.88837677240371704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Add Name"/>
+                                <connections>
+                                    <action selector="addNameButtonTapped:" destination="X61-in-hz5" eventType="touchUpInside" id="dIv-3B-JG0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addNewNameTextField" destination="mfn-PY-tpY" id="uxD-JG-6kQ"/>
+                        <outlet property="resultLabelTextField" destination="OuR-9y-Zbe" id="Asu-0N-4wj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="COO-Eu-kR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1679" y="349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Spp-QX-bP8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1aq-1f-lOq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="B1O-kI-rze">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OiS-ak-BDY" kind="relationship" relationship="rootViewController" id="aVS-uy-bUU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WyY-FB-Vnc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="231" y="319"/>
+        </scene>
+    </scenes>
+</document>
